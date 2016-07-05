@@ -561,7 +561,7 @@ $pmembersid= explode("\n",$txxt);
 
 }
 if($chat_id==$admin){
-  apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => ' سلام قربان حوش آمدید😉
+  apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => ' سلام قربان خوش آمدید😉
 برای پاسخ روی پیام مورد نظر ریپلای کنید و متن خود را بنویسید 😎
 برای آشنایی دکمه ی ⚓️ Help️ را بزنید 👌😃
 .',"parse_mode"=>"MARKDOWN", 'reply_markup' => array(
@@ -659,7 +659,7 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
     		
     }else if ($text == "⚓️ Help" && $chat_id==$admin) {
       
-    		apiRequest("sendMessage", array('chat_id' => $admin, "text" => "`برای پاسخ پیام مورد نظر را ریپلای کنید`
+    		apiRequest("sendMessage", array('chat_id' => $admin, "text" => "`برای پاسخ به یک پیام اونو ریپلای کن ارشیا جون!`
 🔷 لیست کامنت های موجود :
 
 🔹`1.` */ban*
@@ -691,7 +691,7 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
 تعداد کاربران در لیست سیاه
 —-------------------------------
 🔸`4.`*Settings*
-تنظیمان ربات
+تنظیمات ربات
 
 .","parse_mode" =>"MARKDOWN",'reply_markup' => array(
         'keyboard' => array(array('🗣 Send To All'),array('⚓️ Help','👥 Members','❌ Blocked Users'),array("Settings ⚙")),
@@ -725,9 +725,9 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
         'resize_keyboard' => true)));
     }
     else if ($text == "🔙 Back" && $chat_id==$admin) {
-    		apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'سلام قربان حوش آمدید😉
-برای پاسخ روی پیام مورد نظر ریپلای کنید و متن خود را بنویسید 😎
-برای آشنایی دکمه ی ⚓️ Help️ را بزنید 👌😃
+    		apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'سلام ارشیا جان خوش اومدی😉
+برای پاسخ به یک پیام اونو ریپلای کن و متن خودت رو بنویس😎
+برای آشنایی بیشتر دکمه ی Help روبزن😃👌 
 .', 'reply_markup' => array(
         'keyboard' => array(array('🗣 Send To All'),array('⚓️ Help','👥 Members','❌ Blocked Users'),array("Settings ⚙")),
         'one_time_keyboard' => true,
@@ -754,7 +754,7 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
 			apiRequest("sendMessage", array('chat_id' => $membersidd[$y], "text" => $texttoall,"parse_mode" =>"HTML"));
 		}
 		$memcout = count($membersidd)-1;
-	 	apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "📦 پیام شما به  ".$memcout." مخاطب ازسال شد.
+	 	apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "📦 پیام شما به  ".$memcout." مخاطب ارسال شد.
 .","parse_mode" =>"HTML",'reply_markup' => array(
         'keyboard' => array(array('🗣 Send To All'),array('⚓️ Help','👥 Members','❌ Blocked Users'),array("Settings ⚙")),
         'one_time_keyboard' => true,
